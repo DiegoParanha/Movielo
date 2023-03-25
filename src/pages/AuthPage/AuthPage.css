@@ -1,0 +1,22 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    background-image: url('https://t4.ftcdn.net/jpg/02/80/48/21/360_F_280482114_NUxshs6Br7d1f5FripqBqsYXrKSC21aG.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+h1, h2 {
+    color: aqua;
+}
+
+button {
+    background-color: black;
+}
+
+button:hover {
+    background-color: gray;
+    color: aqua;
+}

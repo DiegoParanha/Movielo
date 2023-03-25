@@ -21,7 +21,7 @@ body {
   sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--tan-4);
+  background-color: gray;
   padding: 2vmin;
   height: 100vh;
 }
@@ -69,7 +69,7 @@ code {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: var(--tan-1);
+  background-color: black;
   color: var(--text-dark);
   border: .1vmin solid var(--tan-3);
   border-radius: 1vmin;
@@ -80,13 +80,13 @@ code {
 
 .form-container {
   padding: 3vmin;
-  background-color: var(--tan-1);
-  border: .1vmin solid var(--tan-3);
+  background-color: black;
+  border: .1vmin solid white;
   border-radius: 1vmin;
 }
 
 p.error-message {
-  color: var(--orange);
+  color: red;
   text-align: center;
 }
 
@@ -94,7 +94,7 @@ form {
   display: grid;
   grid-template-columns: 1fr 3fr;
   gap: 1.25vmin;
-  color: var(--text-light);
+  color: whitesmoke;
 }
 
 label {
@@ -106,27 +106,27 @@ label {
 input {
   padding: 1vmin;
   font-size: 2vmin;
-  border: .1vmin solid var(--tan-3);
+  border: .1vmin solid black;
   border-radius: .5vmin;
-  color: var(--text-dark);
+  color: black;
   background-image: none !important; /* prevent lastpass */
   outline: none;
 }
 
 input:focus {
-  border-color: var(--orange);
+  border-color: white;
 }
 
 button, a.button {
   margin: 1vmin;
   padding: 1vmin;
   color: var(--white);
-  background-color: var(--orange);
+  background-color: aqua;
   font-size: 2vmin;
   font-weight: bold;
   text-decoration: none;
   text-align: center;
-  border: .1vmin solid var(--tan-2);
+  border: .1vmin solid white;
   border-radius: .5vmin;
   outline: none;
   cursor: pointer;
@@ -144,10 +144,27 @@ button.btn-xs {
 
 button:disabled, form:invalid button[type="submit"] {
   cursor: not-allowed;
-  background-color: var(--tan-4);
+  background-color: gray;
 }
 
 button[type="submit"] {
   grid-column: span 2;
   margin: 1vmin 0 0;
+}
+
+span {
+  color: white;
+}
+
+.Logo {
+  height: 40px;
+  display: flex;
+  justify-items: left;
+}
+
+.Nav {
+  background-color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
