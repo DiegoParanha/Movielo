@@ -61,3 +61,12 @@
   align-items: center;
   justify-content: center;
 }
+
+.heading {
+  display: flex;
+}
+
+.SearchBar {
+  margin-top: 20px;
+  width: 40vw;
+}

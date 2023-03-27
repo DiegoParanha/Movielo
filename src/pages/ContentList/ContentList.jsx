@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import * as contentAPI from '../../utilities/content-api';
-import ContentCard from "../../components/ContentCard/ContentCard";
+// import ContentCard from "../../components/ContentCard/ContentCard";
+import './ContentList.css'
 
 
 export default function MovieList() {
@@ -23,8 +24,8 @@ useEffect(function() {
             {content.Search && content.Search.map((c) => (
                 <>
                 <div className="container">
+                    <div><img src={c.Poster}  /></div>
                     <div className="row">
-                        <img src="https://m.media-amazon.com/images/M/MV5BYmQ4YWMxYjUtNjZmYi00MDQ1LWFjMjMtNjA5ZDdiYjdiODU5XkEyXkFqcGdeQXVyMTMzNDExODE5._V1_SX300.jpg" />
                         <p>{c.Title}</p>
                         <p>{c.Year}</p>
                     </div>

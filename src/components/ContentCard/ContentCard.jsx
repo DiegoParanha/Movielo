@@ -1,3 +1,5 @@
+
+
 export default function ContentCard({contents}) {
     return (
         <div>

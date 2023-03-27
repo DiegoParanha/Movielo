@@ -8,7 +8,7 @@ import WatchListPage from '../WatchListPage/WatchListPage';
 import NavBar from '../../components/NavBar/NavBar';
 import HomePage from '../HomePage/HomePage';
 import SearchPage from '../SearchPage/SearchPage'
-import MovieList from '../MovieList/MovieList';
+import MovieList from '../ContentList/ContentList';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
