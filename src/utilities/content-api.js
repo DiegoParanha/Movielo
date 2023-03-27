@@ -6,5 +6,5 @@ export async function index() {
 }
 
 export async function search() {
-    return sendRequest(BASE_URL/search)
+    return sendRequest(BASE_URL/search, 'GET', search)
 }

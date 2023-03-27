@@ -161,6 +161,9 @@ span {
   display: flex;
   justify-items: left;
 }
+.Logo:hover {
+  border: 2px solid white;
+}
 
 .Nav {
   background-color: gray;
@@ -168,3 +171,13 @@ span {
   align-items: center;
   justify-content: space-between;
 }
+
+.links {
+  color: white;
+}
+
+.links:hover {
+  color: aqua;
+}
+
+

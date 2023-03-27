@@ -9,15 +9,16 @@ export default function NavBar({ user, setUser }) {
 
   return (
     <nav className='Nav'>
-      <Link to='/'><img className="Logo"src="Movielo-logo.png" /></Link>
-      <Link to="/search"> Search</Link>
+      <Link className="links" to='/'><img className="Logo"src="Movielo-logo.png" /></Link>
+      <Link className="links" to="/search"> Search</Link>
       &nbsp; | &nbsp;
-      <Link to="/watchlist">Watch List</Link>
+      <Link className="links" to="/watchlist">Watch List</Link>
       &nbsp; | &nbsp;
-      <Link to="/watchedlist">Watched List</Link>
+      <Link className="links" to="/watchedlist">Watched List</Link>
       &nbsp;&nbsp;
       <span>Welcome, {user.name}</span>
-      &nbsp;&nbsp;<Link to="" onClick={handleLogOut}>Log Out</Link>
+      &nbsp;&nbsp;
+      <Link className="links" to="" onClick={handleLogOut}>Log Out </Link>&nbsp;
     </nav>
   );
 }

@@ -2,7 +2,8 @@
     box-sizing: border-box;
 }
 body {
-    background-image: url('https://t4.ftcdn.net/jpg/02/80/48/21/360_F_280482114_NUxshs6Br7d1f5FripqBqsYXrKSC21aG.jpg');
+    /* background-image: url('https://t4.ftcdn.net/jpg/02/80/48/21/360_F_280482114_NUxshs6Br7d1f5FripqBqsYXrKSC21aG.jpg'); */
+    background-color: rgb(33, 32, 32);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
