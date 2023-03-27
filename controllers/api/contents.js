@@ -20,6 +20,8 @@ async function search() {
 async function index(req, res) {
   let contents = await fetch(
     `https://www.omdbapi.com/?apikey=89090323&s=batman`
+    // `https://www.omdbapi.com/?apikey=89090323&${s=search}`
+
   ).then((response) => response.json());
   console.log(contents);
   res.json(contents);

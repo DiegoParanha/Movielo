@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import * as contentAPI from '../../utilities/content-api';
-// import ContentCard from "../../components/ContentCard/ContentCard";
+import ContentCard from "../../components/ContentCard/ContentCard";
+import { Link } from 'react-router-dom';
 import './ContentList.css'
 
 
@@ -26,9 +27,11 @@ useEffect(function() {
                 <div className="container">
                     <div><img src={c.Poster}  /></div>
                     <div className="row">
-                        <p>{c.Title}</p>
+                        <h3>{c.Title}</h3>
                         <p>{c.Year}</p>
+                        <p>{c.Type}</p>
                     </div>
+                    <button><Link to="/ContentCard">Details</Link></button>
                 </div>
                 </>
             ))}

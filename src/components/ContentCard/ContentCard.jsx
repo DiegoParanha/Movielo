@@ -3,7 +3,7 @@
 export default function ContentCard({contents}) {
     return (
         <div>
-            <h1>Hello</h1>
+            <h1>Details</h1>
             <p>{contents.Title}</p>
             <p>{contents.Year}</p>
             <p>{contents.Plot}</p>
@@ -11,5 +11,5 @@ export default function ContentCard({contents}) {
             <p>{contents.Poster}</p>
             <p>{contents.Type}</p>
         </div>
-    )
+        )
 }
