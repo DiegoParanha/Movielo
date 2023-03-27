@@ -10,7 +10,7 @@ export default function NavBar({ user, setUser }) {
   return (
     <nav className='Nav'>
       <Link to='/'><img className="Logo"src="Movielo-logo.png" /></Link>
-      <Link> Search</Link>
+      <Link to="/search"> Search</Link>
       &nbsp; | &nbsp;
       <Link to="/watchlist">Watch List</Link>
       &nbsp; | &nbsp;
