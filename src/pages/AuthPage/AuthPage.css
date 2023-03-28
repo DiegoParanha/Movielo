@@ -20,4 +20,5 @@ button {
 button:hover {
     background-color: gray;
     color: aqua;
+    transition: 300ms;
 }

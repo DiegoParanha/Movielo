@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import * as contentAPI from '../../utilities/content-api';
-import ContentCard from "../../components/ContentCard/ContentCard";
+import ContentCard from "../../components/ContentDetail/ContentDetail";
 import { Link } from 'react-router-dom';
 import './ContentList.css'
 
 
-export default function MovieList() {
+export default function ContentList({result, idx, handleDetail}) {
 const [content, setContent] = useState([]);
 
 
@@ -21,17 +21,19 @@ useEffect(function() {
 }, [])
 
     return (
-        <div>
+        <div key={idx} >
             {content.Search && content.Search.map((c) => (
                 <>
-                <div className="container">
-                    <div><img src={c.Poster}  /></div>
-                    <div className="row">
-                        <h3>{c.Title}</h3>
-                        <p>{c.Year}</p>
-                        <p>{c.Type}</p>
+                <div className="section">
+                    <div className="container">
+                        <h3 className="title">{c.Title}</h3>
+                        <img className="poster" src={c.Poster}  />
+                        <div className="row">
+                            <p className="info">({c.Year}) · {c.Type}</p>
+                        </div>
+                        <Link to="/ContentDetail"><button className="detailbtn">Details</button></Link>
+                        <button onClick={() => handleDetail(result.id)} className="detailbtn">Details</button>
                     </div>
-                    <button><Link to="/ContentCard">Details</Link></button>
                 </div>
                 </>
             ))}

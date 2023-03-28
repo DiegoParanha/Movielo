@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import * as contentAPI from '../../utilities/content-api';
-import ContentCard from "../../components/ContentCard/ContentCard";
+import ContentCard from "../../components/ContentDetail/ContentDetail";
 import '../App/App.css';
 
 
@@ -16,7 +16,9 @@ export default function HomePage() {
     <>
     <h1>Welcome to Movelo!</h1>
     <div className="carousel">
-        <h3 className="recommend">Content we recommend</h3>
+        <h3 className="recommend">
+            <div className="recommend2">Content we recommend</div> 
+        </h3>
         <div className="imgcontainer">
             <img src="https://m.media-amazon.com/images/M/MV5BYmQ4YWMxYjUtNjZmYi00MDQ1LWFjMjMtNjA5ZDdiYjdiODU5XkEyXkFqcGdeQXVyMTMzNDExODE5._V1_SX300.jpg" />
         </div>

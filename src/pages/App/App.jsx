@@ -8,7 +8,8 @@ import WatchListPage from '../WatchListPage/WatchListPage';
 import NavBar from '../../components/NavBar/NavBar';
 import HomePage from '../HomePage/HomePage';
 import SearchPage from '../SearchPage/SearchPage'
-import MovieList from '../ContentList/ContentList';
+import ContentList from '../ContentList/ContentList';
+import ContentDetail from '../../components/ContentDetail/ContentDetail';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -25,7 +26,8 @@ export default function App() {
               <Route path="/" element={<HomePage />}/>
               <Route path="/watchedlist" element={<WatchedListPage />} />
               <Route path="/watchlist" element={<WatchListPage />} />
-              <Route path="/movielist" element={<MovieList />} />
+              <Route path="/contentlist" element={<ContentList />} />
+              <Route path="/content/:id" element={<ContentDetail />} />
             </Routes>
 
           </>

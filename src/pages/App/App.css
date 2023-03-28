@@ -40,9 +40,10 @@
 .carousel {
   display: grid;
   grid-template-columns: 1fr 0.5fr;
-  background-color: beige;
+  background-color: rgb(148, 148, 145);
   margin-top: 20px;
   height: 40vh;
+  border: 5px solid black;
 }
 
 .imgcontainer {
@@ -60,6 +61,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+}
+
+.recommend2 {
+  border: 5px solid black;
+  padding: 20px;
+
 }
 
 .heading {

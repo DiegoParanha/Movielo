@@ -1,28 +1,37 @@
-import {useState} from 'react';
-import ContentCard from '../../components/ContentCard/ContentCard';
+import React, {useState} from 'react';
+import { useNavigate } from 'react-router-dom';
+import ContentDetail from '../../components/ContentDetail/ContentDetail';
+import * as contentsAPI from '../../utilities/content-api'
 import ContentList from '../ContentList/ContentList';
+import SearchForm from '../../components/SearchForm/SearchForm';
 
-export default function SearchPage({content}) {
-    const [search, setSearch] = useState("");
+export default function SearchPage(props) {
+    const [searchResults, setSearchResults] = useState([]);
+    const navigate = useNavigate();
 
-    const handleSearch = async () => {
-
-        
+    async function handleSearch (searchItem) {
+        const results = await contentsAPI.getSearch(searchItem);
+        setSearchResults(results)  
     }
 
+    async function handleDetail(id) {
+        const ContentDetail = await navigate(`/content/${id}`)
+        return ContentDetail
+    }
+
+    const SearchResultsMap = searchResults.map((result, idx) => (
+        <ContentList results={result} idx={idx} handleDetail={handleDetail} />
+    ))
+
+    
     return (
         <>
-            <input 
-                className='SearchBar'
-                type="text" 
-                placeholder="Enter Movie or Series"
-                value={search.value}
-                onChange={(event) => setSearch(event.target.value)}
-                name='s'
-                required
-                /> 
+        <div>
+            <h1>Search Movies or Shows</h1>
+            <SearchForm handleSearch={handleSearch}/>
+        </div>
             <h1 className='heading'>Content</h1>
-            <ContentList />
+            <div>{SearchResultsMap}</div>
         </>
     )
 
