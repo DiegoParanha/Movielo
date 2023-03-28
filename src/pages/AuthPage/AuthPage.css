@@ -14,11 +14,11 @@ h1, h2 {
 }
 
 button {
-    background-color: black;
+    background-color: gray;
 }
 
 button:hover {
-    background-color: gray;
+    background-color: rgb(27, 26, 26);
     color: aqua;
     transition: 300ms;
 }

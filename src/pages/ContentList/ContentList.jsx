@@ -21,18 +21,18 @@ useEffect(function() {
 }, [])
 
     return (
-        <div key={idx} >
+        <div className="section" key={idx} >
             {content.Search && content.Search.map((c) => (
                 <>
-                <div className="section">
-                    <div className="container">
+                <div>
+                <div className="container">
                         <h3 className="title">{c.Title}</h3>
-                        <img className="poster" src={c.Poster}  />
+                        <Link to="/ContentDetail"><img className="poster" src={c.Poster}  /></Link>
                         <div className="row">
                             <p className="info">({c.Year}) · {c.Type}</p>
                         </div>
-                        <Link to="/ContentDetail"><button className="detailbtn">Details</button></Link>
-                        <button onClick={() => handleDetail(result.id)} className="detailbtn">Details</button>
+                        {/* <Link to="/ContentDetail"><button className="detailbtn">Details</button></Link> */}
+                        {/* <button onClick={() => handleDetail(result.id)} className="detailbtn">Details</button> */}
                     </div>
                 </div>
                 </>

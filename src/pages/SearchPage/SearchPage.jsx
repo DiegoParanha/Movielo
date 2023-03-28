@@ -32,6 +32,8 @@ export default function SearchPage(props) {
         </div>
             <h1 className='heading'>Content</h1>
             <div>{SearchResultsMap}</div>
+
+        <ContentList />
         </>
     )
 

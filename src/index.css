@@ -144,12 +144,11 @@ button.btn-xs {
 
 button:disabled, form:invalid button[type="submit"] {
   cursor: not-allowed;
-  background-color: gray;
+  background-color: black;
 }
 
 button[type="submit"] {
   grid-column: span 2;
-  margin: 1vmin 0 0;
 }
 
 span {

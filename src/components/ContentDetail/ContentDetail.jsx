@@ -5,7 +5,14 @@ import * as contentAPI from '../../utilities/content-api';
 export default function ContentDetail({contents}) {
     const [contentDetail, setContentDetail] = useState(null)
 
-    
+    useEffect(function() {
+        async function getDetails() {
+            const details = await contentAPI.getContentDetails();
+        }
+        getDetails();
+    },[]);
+
+
     return (
         <>
         <h1>Details</h1>

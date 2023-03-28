@@ -74,7 +74,6 @@
   display: flex;
 }
 
-.SearchBar {
-  margin-top: 20px;
-  width: 40vw;
+.search {
+  width: 30vw;
 }

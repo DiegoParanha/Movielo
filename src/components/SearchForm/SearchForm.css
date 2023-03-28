@@ -1,0 +1,15 @@
+.submitbtn {
+    width: 10vw;
+}
+
+button {
+    margin: 1vmin;
+}
+
+.search {
+    display: flex;
+}
+
+.searchForm {
+    display: flex;
+}

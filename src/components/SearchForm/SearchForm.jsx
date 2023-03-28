@@ -1,7 +1,8 @@
 import {useState} from 'react';
+import './SearchForm.css'
 
 export default function SearchForm({handleSearch}) {
-    const [searchItem, setSearchItem] = useState('');
+    const [searchItem, setSearchItem] = useState("");
 
     function handleSubmit(evt) {
         evt.preventDefault();
@@ -10,16 +11,21 @@ export default function SearchForm({handleSearch}) {
     }
 
     function handleChange(evt) {
-        setSearchItem(evt.taget.value)
+        setSearchItem(evt.target.value)
     }
+
     return (
         <div>
-            <form onSubmit={handleSubmit}>
-                <input type="text"
-                placeholder='Search any movies or series'
-                value={searchItem}
-                onChange={handleChange} />
-                <button type="submit">Search</button>
+            <form className="searchForm" onSubmit={handleSubmit}>
+                <input 
+                    className="search"
+                    type="text"
+                    name="text"
+                    placeholder='Search any movies or series'
+                    value={searchItem}
+                    onChange={handleChange} 
+                />
+                <button className="submitbtn" type="submit">Search</button>
             </form>
         </div>
     )
