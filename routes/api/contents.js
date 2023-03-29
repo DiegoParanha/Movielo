@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 const contentCtrl = require('../../controllers/api/contents');
 
-// GET /api/contents/home
+// GET /api/contents/
 router.get('/', ensureLoggedIn, contentCtrl.index);
 
 // GET / api/contents/search

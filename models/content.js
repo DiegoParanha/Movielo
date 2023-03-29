@@ -23,14 +23,14 @@ const commentSchema = new Schema({
 });
 
 const contentSchema = new Schema({
-    title: {type: String, requried: true},
-    year: {type: String, requried: true},
-    rated: {type: String, requried: true},
-    plot: {type: String, requried: true},
-    released: {type: String, required: true},
-    poster: {type: String, requried: true},
+    Title: {type: String, requried: true},
+    Year: {type: String, requried: true},
+    Rated: {type: String, requried: true},
+    Plot: {type: String, requried: true},
+    Released: {type: String, required: true},
+    Poster: {type: String, requried: true},
     imdbID: {type: String, requried: true},
-    type: {type: String, required: true},
+    Type: {type: String, required: true},
     comments: [commentSchema]
 }, {
     timestamps: true

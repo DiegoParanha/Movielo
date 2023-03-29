@@ -1,9 +1,8 @@
 import React, {useState} from 'react';
 import { useNavigate } from 'react-router-dom';
-import ContentDetail from '../../components/ContentDetail/ContentDetail';
 import * as contentsAPI from '../../utilities/content-api'
-import ContentList from '../ContentList/ContentList';
 import SearchForm from '../../components/SearchForm/SearchForm';
+import SearchPageList from '../../components/SearchPageList/SearchPageList';
 
 export default function SearchPage(props) {
     const [searchResults, setSearchResults] = useState([]);
@@ -20,7 +19,7 @@ export default function SearchPage(props) {
     }
 
     const SearchResultsMap = searchResults.map((result, idx) => (
-        <ContentList results={result} idx={idx} handleDetail={handleDetail} />
+        <SearchPageList results={result} idx={idx} handleDetail={handleDetail} />
     ))
 
     
@@ -33,7 +32,6 @@ export default function SearchPage(props) {
             <h1 className='heading'>Content</h1>
             <div>{SearchResultsMap}</div>
 
-        <ContentList />
         </>
     )
 

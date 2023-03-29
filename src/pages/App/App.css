@@ -3,7 +3,7 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 50vmin;
   pointer-events: none;
 }
 
@@ -44,6 +44,7 @@
   margin-top: 20px;
   height: 40vh;
   border: 5px solid black;
+  border-radius: 40px;
 }
 
 .imgcontainer {
@@ -55,7 +56,6 @@
   overflow: hidden;
   border-left: 5px solid black;
 }
-
 
 .recommend {
   display: flex;
@@ -75,5 +75,38 @@
 }
 
 .search {
+  display: flex;
+  align-self: center;
   width: 30vw;
+  height: 4vh;
+}
+
+footer {
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0 5px;
+  border-top: solid 1px #d9d7d4;
+  background-color: rgb(148, 148, 145);
+}
+
+.about-us {
+  display: flex;
+  flex-direction: column;
+  width: 70vw;
+  margin: auto;
+  border: gray solid 5px;
+  border-radius: 20px;
+  padding: 15px;
+}
+
+.about-us2 {
+  color: aqua;
+}
+
+.about-us3 {
+  color: white;
 }

@@ -9,6 +9,7 @@ import NavBar from '../../components/NavBar/NavBar';
 import HomePage from '../HomePage/HomePage';
 import SearchPage from '../SearchPage/SearchPage'
 import ContentList from '../ContentList/ContentList';
+// import SearchPageList from '../../components/SearchPageList/SearchPageList';
 import ContentDetail from '../../components/ContentDetail/ContentDetail';
 
 export default function App() {
@@ -34,6 +35,7 @@ export default function App() {
           :
           <AuthPage setUser={setUser} />
       }
+      <footer className='footer'>All Rights Reserved, &copy; 2023 Movielo &nbsp;</footer>
     </main>
   );
 }

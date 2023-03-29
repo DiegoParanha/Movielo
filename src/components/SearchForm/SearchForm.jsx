@@ -20,7 +20,6 @@ export default function SearchForm({handleSearch}) {
                 <input 
                     className="search"
                     type="text"
-                    name="text"
                     placeholder='Search any movies or series'
                     value={searchItem}
                     onChange={handleChange} 
