@@ -13,11 +13,11 @@ const [content, setContent] = useState([]);
 useEffect(function() {
     async function getContent() {
         const allContent = await contentAPI.index();
-        console.log(allContent, 'this is line 12')
+        // console.log(allContent, 'this is line 12')
         setContent(allContent);
     }
     getContent()
-    console.log(getContent(), 'this is line 16')
+    // console.log(getContent(), 'this is line 16')
 }, [])
 
     return (

@@ -14,7 +14,7 @@ async function search(req, res) {
     if (!search) return null
     const response = await fetch(`${BASE_URL}apikey=${API_KEY}&s=${searchItem}`)
     const searchData = await response.json()
-    console.log(searchData.Search)
+    // console.log(searchData.Search)
     res.json(searchData.Search);
 }
 
@@ -26,7 +26,7 @@ async function index(req, res) {
     // `${BASE_URL}apikey=${API_KEY}&s=${searchItem}`
 
   ).then((response) => response.json());
-  console.log(contents);
+  // console.log(contents);
   res.json(contents);
 }
 
@@ -45,7 +45,7 @@ async function show(req, res) {
       imdbID: content.imdbID 
     };
     content = await Content.create(newContent);
-    console.log(content)
+    // console.log(content)
   }
   res.json(content);
 }

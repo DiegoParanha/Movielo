@@ -1,0 +1,22 @@
+.detailPage {
+    display: grid;
+    grid-template-columns: 10fr 5fr;
+    border: 5px solid lightgray;
+}
+
+.detailTitle {
+    color: White;
+}
+
+.detailPlot {
+    padding: 0 50px 0 50px ;
+    color: azure;
+}
+
+.detail {
+    color: white;
+}
+
+.poster {
+    margin: 15px;
+}
