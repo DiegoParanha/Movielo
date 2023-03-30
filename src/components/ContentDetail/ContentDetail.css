@@ -2,6 +2,10 @@
     display: grid;
     grid-template-columns: 10fr 5fr;
     border: 5px solid lightgray;
+    border-radius: 20px;
+    height: 25vh;
+    width: 70vw;
+    margin: auto;
 }
 
 .detailTitle {
@@ -17,6 +21,7 @@
     color: white;
 }
 
-.poster {
+.detailPoster {
     margin: 15px;
+    height: 20vh;
 }

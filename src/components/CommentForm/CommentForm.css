@@ -1,0 +1,24 @@
+.commentForm {
+    display: block;
+
+}
+
+.Commentbox {
+    height: 100px;
+    width: 350px;
+}
+.rating {
+    margin-top: 10px;
+    width: 50px;
+}
+
+.ratingLabel {
+    display: flex;
+    justify-content: center;
+}
+
+.commentbtn {
+    display: flex;
+    margin: auto;
+    margin-top: 10px;
+}

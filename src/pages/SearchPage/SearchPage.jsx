@@ -30,7 +30,7 @@ export default function SearchPage(props) {
             <SearchForm handleSearch={handleSearch}/>
         </div>
             <h1 className='heading'>Content</h1>
-            <div>{SearchResultsMap}</div>
+            <div className='section'>{SearchResultsMap}</div>
 
         </>
     )

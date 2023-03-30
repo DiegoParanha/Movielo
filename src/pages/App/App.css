@@ -39,12 +39,13 @@
 
 .carousel {
   display: grid;
-  grid-template-columns: 1fr 0.5fr;
+  grid-template-columns: 1fr 1fr;
   background-color: rgb(148, 148, 145);
   margin-top: 20px;
   height: 40vh;
   border: 5px solid black;
   border-radius: 40px;
+  width: 100%;
 }
 
 .imgcontainer {
@@ -58,15 +59,22 @@
 }
 
 .recommend {
-  display: flex;
+  display: grid;
+  grid-template-rows: 10fr 5fr;
   align-items: center;
   justify-content: center;
+  width: 65vw;
+  height: 25vh;
+  padding-top: 10px;
 
 }
 
 .recommend2 {
   border: 5px solid black;
-  padding: 20px;
+  padding: 15px;
+  width: 30vw;
+  margin: auto;
+  margin-top: 40px;
 
 }
 
@@ -96,17 +104,25 @@ footer {
 .about-us {
   display: flex;
   flex-direction: column;
-  width: 70vw;
+  width: 40vw;
   margin: auto;
   border: gray solid 5px;
   border-radius: 20px;
   padding: 15px;
+  background-color: rgb(20, 20, 20);
 }
 
 .about-us2 {
+  margin-bottom: -15px;
   color: aqua;
 }
 
 .about-us3 {
   color: white;
+  position: relative;
+}
+
+.homeImg {
+  margin-top: 30px;
+  height: 30vh;
 }
