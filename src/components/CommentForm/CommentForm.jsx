@@ -22,14 +22,14 @@ export default function CommentForm({handleCreateComment}) {
         <form className="commentForm" onSubmit={handleSubmit}>
             <textarea
                 className='Commentbox'
-                name='text'
+                name='content'
                 placeholder='Add Note'
-                value={newComment.text}
+                value={newComment.content}
                 onChange={handleChange}
                 required 
             />
             <label className="ratingLabel" htmlFor="rating">Rating</label>
-            <select className="rating" name="rating" value={newComment.rating} onChange={handleSubmit}>
+            <select className="rating" name="rating" value={newComment.rating} onChange={handleChange}>
                 <option value={1}>1</option>
                 <option value={2}>2</option>
                 <option value={3}>3</option>

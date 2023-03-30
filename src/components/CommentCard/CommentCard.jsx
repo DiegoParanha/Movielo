@@ -3,11 +3,9 @@
 export default function CommentCard({comments, handleDeleteComment, date}) {
     const commentsMap = comments.map((comment, idx) => (
         <>
-        <h1>
-        {comment.user}
-        {comment.content}
-        {comment.rating}
-        </h1>
+        <p>{comment.user}</p>
+        <p>{comment.content}</p>
+        <p>{comment.rating}</p>
         <button onClick={() => handleDeleteComment(comment._id)}>Delete</button>
         </>
     ))

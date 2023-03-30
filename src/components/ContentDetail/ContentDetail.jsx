@@ -7,7 +7,7 @@ import CommentForm from '../../components/CommentForm/CommentForm'
 import './ContentDetail.css'
 
 export default function ContentDetail() {
-    const [contentDetails, setContentDetails] = useState({})
+    const [contentDetails, setContentDetails] = useState(null)
     const {id} = useParams();
 
 async function handleCreateComment(comment) {
@@ -28,33 +28,27 @@ async function handleDeleteComment(id) {
             setContentDetails(allContentDetails);
         }
         getContentStuff();
-    },[]);
+    },[id]);
 
-        
-    const allContentDetailsMap = contentDetails && contentDetails.length > 0 ? ( contentDetails.map((contentDetail, idx) => (
-        <div className="detailPage" key={idx}>
-            <div>
-                <h2>{contentDetail.Title}</h2>
-                <h3 className="detailTitle">({contentDetail.Year}) · {contentDetail.Rated} · {contentDetail.Type}</h3>
-                <p className="detailPlot">{contentDetail.Plot}</p>
-            </div>
-            <img className="detailPoster"src={contentDetail.Poster} alt={contentDetail.Title} />
-        </div>
-
-    ))
-    ) : null
 
     if(!contentDetails) return null
 
     return (
         <>
         <h1>Content Details</h1>
-        <div>{allContentDetailsMap}</div>
+        <div className="detailPage" >
+            <div>
+                <h2>{contentDetails.Title}</h2>
+                <h3 className="detailTitle">({contentDetails.Year}) · {contentDetails.Rated} · {contentDetails.Type}</h3>
+                <p className="detailPlot">{contentDetails.Plot}</p>
+            </div>
+            <img className="detailPoster"src={contentDetails.Poster} alt={contentDetails.Title} />
+        </div>
         <button>Add to watch List</button>
         <button>Add to watched List</button>
 
         <CommentForm handleCreateComment={handleCreateComment} />
-        {/* <CommentCard handleDeleteComment={handleDeleteComment} comments={contentDetails.comments}/> */}
+        <CommentCard handleDeleteComment={handleDeleteComment} comments={contentDetails.comments}/>
         </>
         )
 }
