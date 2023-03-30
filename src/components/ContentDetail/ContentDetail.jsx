@@ -20,6 +20,16 @@ async function handleDeleteComment(id) {
     setContentDetails(updatedContent)
 }
 
+async function handleEditComment(id) {
+    const editedComment = await commentsAPI.editComment(id);
+    setContentDetails(editedComment)
+}
+
+async function handleUpdateComment(id) {
+    const updatedAfterEditComment = await commentsAPI.updateComment(id);
+    setContentDetails(updatedAfterEditComment)
+}
+
     useEffect(function() {
         async function getContentStuff() {
             const allContentDetails = await contentAPI.getContentDetails(id);
@@ -47,8 +57,13 @@ async function handleDeleteComment(id) {
         <button>Add to watch List</button>
         <button>Add to watched List</button>
 
-        <CommentForm handleCreateComment={handleCreateComment} />
-        <CommentCard handleDeleteComment={handleDeleteComment} comments={contentDetails.comments}/>
+        <CommentForm handleCreateComment={handleCreateComment} date={contentDetails.comments.createdAt}/>
+        <CommentCard 
+        handleDeleteComment={handleDeleteComment} 
+        handleEditComment={handleEditComment} 
+        handleUpdateComment={handleUpdateComment}
+        comments={contentDetails.comments} 
+        />
         </>
         )
 }

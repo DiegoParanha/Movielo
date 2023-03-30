@@ -34,8 +34,8 @@ export default function App() {
           </>
           :
           <AuthPage setUser={setUser} />
-      }
-      <footer className='footer'>All Rights Reserved, &copy; 2023 Movielo &nbsp;</footer>
+        }
+        <footer className='footer'>All Rights Reserved, &copy; 2023 Movielo &nbsp;</footer>
     </main>
   );
 }

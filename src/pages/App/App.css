@@ -96,7 +96,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 0 5px;
+  padding: 5px 0 5px;
   border-top: solid 1px #d9d7d4;
   background-color: rgb(148, 148, 145);
 }

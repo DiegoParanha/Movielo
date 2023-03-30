@@ -1,0 +1,56 @@
+
+.commentUser{
+    display: grid;
+    grid-template-columns: 1fr;
+    float: left;
+}
+
+.userName {
+    padding-left: 10px;
+    color: aqua;
+}
+
+.commentRating {
+    grid-column: 2;
+}
+
+.commentDate {
+    grid-row: 3;
+    grid-column: 2;
+}
+
+.editComment{
+    grid-row: 2;
+    width: 100px;
+
+}
+
+.deleteComment {
+    width: 100px;
+
+}
+
+.userComment {
+    padding-left: 10px;
+}
+
+.comment {
+    display: grid;
+    grid-template-columns: 0.5fr 3fr;
+    border: 3px solid lightgray;
+    color: white;
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 50vw;
+}
+
+.commentMap {
+    display: grid;
+    /* grid-template-columns: 1fr 2fr; */
+    justify-content: center;
+    margin: auto;
+}
+
+.noComment {
+    color: lightgray;
+}

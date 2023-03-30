@@ -1,24 +1,31 @@
+import './CommentCard.css'
 
-
-export default function CommentCard({comments, handleDeleteComment, date}) {
-    const commentsMap = comments.map((comment, idx) => (
+export default function CommentCard({comments, handleDeleteComment, handleEditComment, handleUpdateComment}) {
+    const commentsMap = comments.map((comment, idx, date) => (
         <>
-        <p>{comment.user}</p>
-        <p>{comment.content}</p>
-        <p>{comment.rating}</p>
-        <button onClick={() => handleDeleteComment(comment._id)}>Delete</button>
+        <div className="comment">
+            <div className='commentUser'>
+                <p className='userName'>{comment.user.name}</p>
+            </div>
+            <p className='userComment'>{comment.content}</p>
+            <p className="commentRating">Rating: {comment.rating}</p>
+            <p className='commentDate'>Made on: {new Date(date).toLocaleString()}</p>
+            <button className='editComment' onClick={() => handleUpdateComment(comment._id)}>Update</button>
+            <button className='deleteComment' onClick={() => handleDeleteComment(comment._id)}>Delete</button>
+        </div>
         </>
     ))
 
 
     return (
+        <>
         <div>
             {comments.length ?
-            <p>{commentsMap}</p>
+            <p className='commentMap'>{commentsMap}</p>
             : 
-            <p>No Comments Yet</p>
+            <p className='noComment'>No Comments Yet</p>
             }
-            {/* <p>{new Date(date).toLocaleString()}</p> */}
         </div>
-    )
-}
+        </>
+        )
+    }

@@ -10,15 +10,17 @@ export async function createComment(commentData, id) {
 
 
 export async function deleteComment(id) {
-    const deleteCommentRequest= await sendRequest(`/api/comments/${id}`,
+    const deleteCommentRequest = await sendRequest(`/api/comments/${id}`,
     'DELETE')
     return deleteCommentRequest
 }
 
-export async function editComment() {
-
+export async function editComment(id) {
+    const editCommentRequest = await sendRequest(`/api/comments/${id}/edit`, 'GET')
+    return editCommentRequest
 }
 
-export async function updateComment() {
-
+export async function updateComment(id) {
+    const updateCommentRequest = await sendRequest(`/api/comments/${id}`, 'PUT')
+    return updateCommentRequest
 }

@@ -13,6 +13,6 @@ router.delete('/comments/:id', ensureLoggedIn, commentsCtrl.deleteComment)
 router.get('/comments/:id/edit', ensureLoggedIn, commentsCtrl.editComment)
 
 // PUT /api/comments/:id
-router.get('/comments/:id', ensureLoggedIn, commentsCtrl.updateComment)
+router.put('/comments/:id', ensureLoggedIn, commentsCtrl.updateComment)
 
 module.exports = router;

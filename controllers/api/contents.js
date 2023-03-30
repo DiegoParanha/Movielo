@@ -31,7 +31,7 @@ async function index(req, res) {
 }
 
 async function show(req, res) {
-  let content = await Content.findOne({imdbID: req.params.id})
+  let content = await Content.findOne({imdbID: req.params.id}).populate("comments.user", "name")
   if (!content) {
     content = await fetch(`${BASE_URL}apikey=${API_KEY}&i=${req.params.id}`).then((response) => response.json())
     const newContent = {
@@ -45,6 +45,7 @@ async function show(req, res) {
       imdbID: content.imdbID 
     };
     content = await Content.create(newContent);
+    await content.populate("comments.user", "name")
     // console.log(content)
   }
   res.json(content);
