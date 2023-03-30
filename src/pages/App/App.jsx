@@ -28,7 +28,7 @@ export default function App() {
               <Route path="/watchedlist" element={<WatchedListPage />} />
               <Route path="/watchlist" element={<WatchListPage />} />
               <Route path="/contentlist" element={<ContentList />} />
-              <Route path="/content/:id" element={<ContentDetail />} />
+              <Route path="/content/:imdbID" element={<ContentDetail />} />
             </Routes>
 
           </>

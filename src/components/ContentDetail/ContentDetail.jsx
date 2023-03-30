@@ -7,7 +7,7 @@ import CommentForm from '../../components/CommentForm/CommentForm'
 import './ContentDetail.css'
 
 export default function ContentDetail() {
-    const [contentDetails, setContentDetails] = useState([])
+    const [contentDetails, setContentDetails] = useState({})
     const {id} = useParams();
 
 async function handleCreateComment(comment) {
@@ -24,24 +24,25 @@ async function handleDeleteComment(id) {
         async function getContentStuff() {
             const allContentDetails = await contentAPI.getContentDetails(id);
             console.log(allContentDetails, "This is all content details")
-            setContentDetails([allContentDetails]);
+            console.log(allContentDetails._id)
+            setContentDetails(allContentDetails);
         }
         getContentStuff();
     },[]);
 
         
-    const allContentDetailsMap = contentDetails.map((contentDetail, idx) => (
+    const allContentDetailsMap = contentDetails && contentDetails.length > 0 ? ( contentDetails.map((contentDetail, idx) => (
         <div className="detailPage" key={idx}>
             <div>
                 <h2>{contentDetail.Title}</h2>
                 <h3 className="detailTitle">({contentDetail.Year}) · {contentDetail.Rated} · {contentDetail.Type}</h3>
                 <p className="detailPlot">{contentDetail.Plot}</p>
             </div>
-            <img className="detailPoster"src={contentDetail.Poster} alt="" />
-            <div>{contentDetail.comments} hello</div>
+            <img className="detailPoster"src={contentDetail.Poster} alt={contentDetail.Title} />
         </div>
 
     ))
+    ) : null
 
     if(!contentDetails) return null
 

@@ -2,7 +2,18 @@ const Content = require("../../models/content.js");
 
 module.exports = {
     createComment, 
-    deleteComment
+    deleteComment,
+    editComment,
+    updateComment
+}
+
+async function updateComment(req, res) {
+
+
+}
+
+async function editComment() {
+
 }
 
 async function deleteComment(req, res, next) {
@@ -17,8 +28,10 @@ async function deleteComment(req, res, next) {
 
 async function createComment(req, res) {
     const content = await Content.findById(req.params.id);
+    console.log(content)
     req.body.user = req.user._id;
     content.comments.push(req.body);
+    console.log(content)
     await content.save();
     res.json(content);
 }

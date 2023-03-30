@@ -14,7 +14,7 @@ export default function HomePage() {
     // ]
  return (
     <>
-    <h1>Welcome to Movelo!</h1>
+    <h1>Welcome to Movielo!</h1>
     <div className="carousel">
         <h3 className="recommend">
         <div className="about-us">

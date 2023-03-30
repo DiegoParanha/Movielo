@@ -15,7 +15,11 @@ export default function CommentCard({comments, handleDeleteComment, date}) {
 
     return (
         <div>
+            {comments.length ?
             <p>{commentsMap}</p>
+            : 
+            <p>No Comments Yet</p>
+            }
             {/* <p>{new Date(date).toLocaleString()}</p> */}
         </div>
     )
