@@ -26,11 +26,12 @@ export default function SearchPage(props) {
     return (
         <>
         <div>
-            <h1>Search Movies or Shows</h1>
+            <h1>Search for any content</h1>
             <SearchForm handleSearch={handleSearch}/>
+        <h1 className='heading'>Content</h1> 
+        <div className='section'>{SearchResultsMap}</div>
+        {/* <button>More options →</button>  */}
         </div>
-            <h1 className='heading'>Content</h1>
-            <div className='section'>{SearchResultsMap}</div>
 
         </>
     )

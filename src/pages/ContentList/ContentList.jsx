@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import * as contentAPI from '../../utilities/content-api';
-import ContentCard from "../../components/ContentDetail/ContentDetail";
 import { Link } from 'react-router-dom';
 import './ContentList.css'
 
@@ -27,7 +26,7 @@ export default function ContentList({result, idx, handleDetail}) {
                     <div>
                     <div className="container">
                             <h3 className="title">{c.Title}</h3>
-                            <Link to="/ContentDetail"><img className="poster" src={c.Poster}  /></Link>
+                            <Link to="/ContentDetail"><img className="poster" src={c.Poster} alt="" /></Link>
                             <div className="row">
                                 <p className="info">({c.Year}) · {c.Type}</p>
                             </div>

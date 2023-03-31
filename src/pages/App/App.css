@@ -94,11 +94,8 @@ footer {
   position: fixed;
   bottom: 0;
   display: flex;
-  align-items: center;
-  justify-content: center;
   padding: 5px 0 5px;
-  border-top: solid 1px #d9d7d4;
-  background-color: rgb(148, 148, 145);
+  color: white;
 }
 
 .about-us {
@@ -125,16 +122,9 @@ footer {
 .homeImg {
   margin-top: 30px;
   height: 30vh;
+  transition: 100ms;
 }
 
-.homeImg2 {
-  margin-top: 30px;
-  height: 30vh;
-  visibility: hidden;
-}
-
-.homeImg3 {
-  margin-top: 30px;
-  height: 30vh;
-  visibility: hidden;
+.contentSearchTag {
+  color: lightgray;
 }

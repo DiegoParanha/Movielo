@@ -68,7 +68,7 @@ export default function ContentDetail({user}) {
         
         {contentDetails.user === contentDetails.user ?
         <button className="commentBtnForm">Write a Comment</button> 
-        :
+         :
         <>
         <CommentForm handleCreateComment={handleCreateComment} />
         </>
@@ -78,7 +78,6 @@ export default function ContentDetail({user}) {
             handleEditComment={handleEditComment} 
             handleUpdateComment={handleUpdateComment}
             comments={contentDetails.comments} 
-            date={contentDetails.comments.createdAt}
             user={user}
         />
     

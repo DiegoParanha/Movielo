@@ -1,5 +1,3 @@
-import ContentList from "../../pages/ContentList/ContentList";
-
 
 
 export default function SearchPageList({results, idx, handleDetail}) {

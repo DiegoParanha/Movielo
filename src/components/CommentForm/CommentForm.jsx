@@ -1,11 +1,9 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import './CommentForm.css'
 
 
 export default function CommentForm({handleCreateComment}) {
     const [newComment, setNewComment] = useState({content:"", rating: 5});
-    const navigate = useNavigate();
 
     function handleSubmit(evt) {
         evt.preventDefault();
