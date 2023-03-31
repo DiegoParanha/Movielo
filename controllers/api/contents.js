@@ -6,8 +6,17 @@ const API_KEY = process.env.API_KEY;
 module.exports = {
   index,
   search, 
-  show
+  show,
+  addToWatchList
 };
+
+async function addToWatchList(req, res) {
+  const content = await Content.findById(req.params.id);
+  if(content.usersWatchList.id(req.user._id)) return res.json(content);
+  content.usersWatchList.push(req.user._id);
+  await content.save();
+  res.json(content);
+}
 
 async function search(req, res) {
     const searchItem = req.query.searchItem;

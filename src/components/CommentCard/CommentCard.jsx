@@ -1,3 +1,4 @@
+
 import './CommentCard.css'
 
 export default function CommentCard({comments, handleDeleteComment, handleEditComment, handleUpdateComment}) {
@@ -10,7 +11,7 @@ export default function CommentCard({comments, handleDeleteComment, handleEditCo
             <p className='userComment'>{comment.content}</p>
             <p className="commentRating">Rating: {comment.rating}</p>
             <p className='commentDate'>Made on: {new Date(date).toLocaleString()}</p>
-            <button className='editComment' onClick={() => handleUpdateComment(comment._id)}>Update</button>
+            <button className='editComment' onClick={() => handleEditComment(comment._id)}>Edit</button>
             <button className='deleteComment' onClick={() => handleDeleteComment(comment._id)}>Delete</button>
         </div>
         </>
