@@ -70,7 +70,7 @@ export default function ContentDetail({user}) {
         <button className="commentBtnForm">Write a Comment</button> 
         :
         <>
-        <CommentForm handleCreateComment={handleCreateComment} date={contentDetails.comments.createdAt}/>
+        <CommentForm handleCreateComment={handleCreateComment} />
         </>
         }
         <CommentCard 
