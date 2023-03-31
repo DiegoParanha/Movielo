@@ -23,7 +23,7 @@ export default function CommentForm({handleCreateComment}) {
             <textarea
                 className='Commentbox'
                 name='content'
-                placeholder='Add Note'
+                placeholder='Tell Us what you think'
                 value={newComment.content}
                 onChange={handleChange}
                 required 
@@ -41,7 +41,7 @@ export default function CommentForm({handleCreateComment}) {
                 <option value={9}>9</option>
                 <option value={10}>10</option>
             </select>
-            <button className="commentbtn" type="submit">Add Note</button>
+            <button className="commentbtn" type="submit">Add Comment</button>
         </form>
         </>
     )

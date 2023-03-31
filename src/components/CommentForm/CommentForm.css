@@ -1,11 +1,10 @@
 .commentForm {
     display: block;
-
 }
 
 .Commentbox {
-    height: 100px;
-    width: 350px;
+    height: 50px;
+    width: 20vw;
 }
 .rating {
     margin-top: 10px;
@@ -21,4 +20,5 @@
     display: flex;
     margin: auto;
     margin-top: 10px;
+    font-size: 15px;
 }

@@ -4,7 +4,6 @@
     border: 5px solid lightgray;
     border-radius: 20px;
     height: 25vh;
-    width: 70vw;
     margin: auto;
 }
 
@@ -24,4 +23,19 @@
 .detailPoster {
     margin: 15px;
     height: 20vh;
+}
+
+.watchListBtn {
+    font-size: 15px;
+    
+}
+
+.watchedListBtn {
+    font-size: 15px;
+}
+
+.commentBtnForm {
+    display: flex;
+    margin: auto;
+    font-size: 15px;
 }
