@@ -35,7 +35,6 @@ async function index(req, res) {
     // `${BASE_URL}apikey=${API_KEY}&s=${searchItem}`
 
   ).then((response) => response.json());
-  // console.log(contents);
   res.json(contents);
 }
 
@@ -55,7 +54,6 @@ async function show(req, res) {
     };
     content = await Content.create(newContent);
     await content.populate("comments.user", "name")
-    // console.log(content)
   }
   res.json(content);
 }

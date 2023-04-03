@@ -3,7 +3,7 @@ import '../App/App.css';
 
 
 const images = [
-    // breaking bad
+    // breaking bad 
     // batman begins
     // Avengers Endgame
     // The prestige

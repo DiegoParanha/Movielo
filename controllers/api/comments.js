@@ -9,7 +9,7 @@ module.exports = {
 }
 
 async function updateComment(req, res) {
-    const content = await Content.findOne({'comments._id': req.params.id});
+    const content = await Content.findOneAndUpdate({'comments._id': req.params.id});
     const commentSubdoc = Content.comments.id(req.params.id);
     if (!commentSubdoc.userId.equals(req.user._id)) return res.json(content)
     commentSubdoc.content = req.body.content;
@@ -36,7 +36,6 @@ async function deleteComment(req, res, next) {
 async function createComment(req, res) {
     const user = await User.findById(req.user._id)
     const content = await Content.findById(req.params.id).populate('comments.user')
-    // console.log(content.comments[0].user.name, "this is line 33")
     const comment = content.comments.create({
         content: req.body.content,
         rating: req.body.rating,
