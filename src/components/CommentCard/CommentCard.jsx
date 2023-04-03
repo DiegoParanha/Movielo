@@ -21,7 +21,7 @@ export default function CommentCard({comments, user, handleDeleteComment, handle
                     {showEdit !== true ?
                     'Edit'
                     :
-                    'cancel' 
+                    'Cancel' 
                     }
                 </button>
                 {showEdit && (

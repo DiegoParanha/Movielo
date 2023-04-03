@@ -27,8 +27,8 @@ export default function ContentDetail({user}) {
         setContentDetails(editedComment)
     }
 
-    async function handleUpdateComment(id) {
-        const updatedAfterEditComment = await commentsAPI.updateComment(id);
+    async function handleUpdateComment(commentId, commentItem) {
+        const updatedAfterEditComment = await commentsAPI.updateComment(commentId, commentItem);
         setContentDetails(updatedAfterEditComment)
     }
 
@@ -67,7 +67,13 @@ export default function ContentDetail({user}) {
         <button className="watchListBtn">Add to watch List</button>
         <button className="watchedListBtn">Add to watched List</button>
         
-        <button className="commentBtnForm" onClick={() => setShowCommentForm(!showCommentForm)}>Write a Comment</button>
+        <button className="commentBtnForm" onClick={() => setShowCommentForm(!showCommentForm)}>
+            {showCommentForm !== true ?
+            'Write a Comment'
+            :
+            'Cancel'   
+            }
+            </button>
         <>
         {showCommentForm && (
             <CommentForm handleCreateComment={handleCreateComment} />

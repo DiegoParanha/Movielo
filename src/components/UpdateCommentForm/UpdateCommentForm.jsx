@@ -2,7 +2,7 @@ import { useState } from "react"
 import "./UpdateCommentForm.css"
 
 
-export default function UpdateCommentForm({ handleUpdateComment, id}) {
+export default function UpdateCommentForm({ handleUpdateComment, commentId}) {
     const [updateCommentItem, setUpdateCommentItem] = useState({
         content: "",
         rating: 5
@@ -11,7 +11,8 @@ export default function UpdateCommentForm({ handleUpdateComment, id}) {
 
     function handleSubmit(evt) {
         evt.preventDefault();
-        handleUpdateComment(updateCommentItem, id)
+        handleUpdateComment(commentId, updateCommentItem)
+        setUpdateCommentItem({content:"", rating: 5})
     }
 
     function handleInputChange(evt) {
@@ -34,7 +35,7 @@ export default function UpdateCommentForm({ handleUpdateComment, id}) {
                 <option value={9}>9</option>
                 <option value={10}>10</option>
             </select>
-            <button className="commentbtn" type="Submit">Update comment</button>
+            <button className="commentbtn" type="Submit">Update Comment</button>
         </form>
     )
 
