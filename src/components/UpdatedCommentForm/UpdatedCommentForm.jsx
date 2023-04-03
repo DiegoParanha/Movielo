@@ -1,4 +1,4 @@
 
-export default function UpdatedCommentForm(comment, ) {
+export default function UpdatedCommentForm(comment) {
     return
 }

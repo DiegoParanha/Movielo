@@ -26,8 +26,8 @@ export default function App() {
               {/* Route components in here */}
               <Route path="/search" element={<SearchPage />}/>
               <Route path="/" element={<HomePage />}/>
-              <Route path="/watchedlist" element={<WatchedListPage />} />
-              <Route path="/watchlist" element={<WatchListPage />} />
+              <Route path="/watchedlist" element={<WatchedListPage user={user} />} />
+              <Route path="/watchlist" element={<WatchListPage user={user} />} />
               <Route path="/contentlist" element={<ContentList />} />
               <Route path="/content/:id" element={<ContentDetail user={user}/>} />
               <Route path="/content/:id/edit" element={<UpdatedCommentForm />}  />

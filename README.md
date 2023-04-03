@@ -3,12 +3,13 @@
 # 🎥 Movielo 🎥
 ## Moo - Vee - Low
 
-###  [Visit Movielo](https://LINK TO MOVIELO)
+###  [Visit Movielo](https://movielo.herokuapp.com/)
 
 
 [![LinkedIn Badge](https://img.shields.io/badge/-@DiegoParanhos-blue?style=flat&logo=Linkedin&logoColor=black)](https://www.linkedin.com/in/diegoparanhos/)
 
-Movielo Description
+
+As an enthusiast who loves to keep track of my favorite movies and TV shows, I often found myself frustrated with the lack of a centralized location to store my watch list. I would write down titles on random scraps of paper, save them in various note-taking apps, or just try to remember them off the top of my head. That's when I decided to take matters into my own hands and create a system that worked for myself/ friends. I researched different apps and websites, and tested out several options before settling on one that I felt was user-friendly and met all of my needs. Now, I have a single location to store my watch list, and I can easily access it from my phone(eventually) or computer whenever I need to update or reference it. It may seem like a small thing, but having a dedicated place to store my watch list has made a big difference in my enjoyment of TV and movies.
 <div>
 
 
@@ -31,10 +32,11 @@ Movielo Description
 
 
 # 📝 Getting Started
-1. 
-2. 
-3. 
-4.
+1. Sign in or create an account to get access to the all movies and TV shows
+2. On the home Page you are greeted with an about us and a content recommendation carousel of my favorite titles
+3. Click on search in the nav bar, then you can look up any titles from the movie API so you can see what other if other users are talking about it or if they have rated that specfic content.
+4. You can either add a comment yourself to the content or choose to add it to your "Watch List" or "Watched List"
+5. Once added to either list you are able to give it personal notes / ratings that are only for you to see.
 
 ---
 
@@ -42,5 +44,8 @@ Movielo Description
 
 ---
 # 👾 Upcoming Features
-- 
+- User specific profiles that they can share their watch list's with other users
+- Users to be able to submit a photo to display in the nav bar
+- Changes pages based on search results
+- User names to be unique and I want users to get an error message when they try and use an email/ username that is already taken 
 
