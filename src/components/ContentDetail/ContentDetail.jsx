@@ -10,7 +10,7 @@ export default function ContentDetail({user}) {
     const [contentDetails, setContentDetails] = useState(null)
     const {id} = useParams();
     const [showCommentForm, setShowCommentForm] = useState(false);
-    console.log(user);
+    // console.log(user);
 
     async function handleCreateComment(comment) {
         const newContentWithComment = await commentsAPI.createComment(comment, contentDetails._id);
@@ -35,20 +35,16 @@ export default function ContentDetail({user}) {
         useEffect(function() {
             async function getContentStuff() {
                 const allContentDetails = await contentAPI.getContentDetails(id);
-                console.log(allContentDetails, "This is all content details")
-                console.log(allContentDetails._id)
+                // console.log(allContentDetails, "This is all content details")
+                // console.log(allContentDetails._id)
                 setContentDetails(allContentDetails);
             }
             getContentStuff();
         },[id]);
 
-    async function addToWatchList() {
-        const addContentToWatchList = await contentAPI.getContentDetails(id);
-        setContentDetails(addContentToWatchList)
+    async function handleAddToWatchList(id) {
+        const content = await contentAPI.addToWatchList(id);
     }
-        useEffect(function() {
-
-        })
 
 
     if(!contentDetails) return null
@@ -64,7 +60,7 @@ export default function ContentDetail({user}) {
             </div>
             <img className="detailPoster"src={contentDetails.Poster} alt={contentDetails.Title} />
         </div>
-        <button className="watchListBtn">Add to watch List</button>
+        <button className="watchListBtn" onClick={() => handleAddToWatchList(contentDetails._id)}>Add to watch List</button>
         <button className="watchedListBtn">Add to watched List</button>
         
         <button className="commentBtnForm" onClick={() => setShowCommentForm(!showCommentForm)}>

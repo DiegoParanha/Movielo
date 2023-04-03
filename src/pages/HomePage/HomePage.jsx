@@ -12,6 +12,13 @@ const images = [
     "https://m.media-amazon.com/images/M/MV5BNDFjYTIxMjctYTQ2ZC00OGQ4LWE3OGYtNDdiMzNiNDZlMDAwXkEyXkFqcGdeQXVyNzI3NjY3NjQ@._V1_SX300.jpg",
     "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SX300.jpg",
     "https://m.media-amazon.com/images/M/MV5BMjA4NDI0MTIxNF5BMl5BanBnXkFtZTYwNTM0MzY2._V1_SX300.jpg",
+    "https://m.media-amazon.com/images/M/MV5BZDA0OGQxNTItMDZkMC00N2UyLTg3MzMtYTJmNjg3Nzk5MzRiXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_SX300.jpg",
+    "https://m.media-amazon.com/images/M/MV5BYTIxNjk3YjItYmYzMC00ZTdmLTk0NGUtZmNlZTA0NWFkZDMwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_SX300.jpg",
+    "https://m.media-amazon.com/images/M/MV5BMTdjZTliODYtNWExMi00NjQ1LWIzN2MtN2Q5NTg5NTk3NzliL2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg",
+    "https://m.media-amazon.com/images/M/MV5BMjQ0MTgyNjAxMV5BMl5BanBnXkFtZTgwNjUzMDkyODE@._V1_SX300.jpg", 
+    "https://m.media-amazon.com/images/M/MV5BZDgxNjQ2MjMtMjk2Yi00M2Q2LWI0ZDktOGM1NWI5YWUzMjk4XkEyXkFqcGdeQXVyOTA3MTMyOTk@._V1_SX300.jpg",
+    "https://m.media-amazon.com/images/M/MV5BMDZkYmVhNjMtNWU4MC00MDQxLWE3MjYtZGMzZWI1ZjhlOWJmXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg",
+
 ]
 
 export default function HomePage() {
@@ -23,34 +30,34 @@ export default function HomePage() {
                 setCurrentIndex(0);
             } 
             else {
-                 setCurrentIndex(currentIndex + 1);
+                setCurrentIndex(currentIndex + 1);
             }
-        }, 500)
+        }, 3000)
         
         return () => clearInterval(intervalId);
-    }, [])
- return (
-    <>
-    <h1>Welcome to Movielo!</h1>
-    <div className="carousel">
-        <h3 className="recommend">
-        <div className="about-us">
-            <h3 className="about-us2">About us</h3>
-            <p className="about-us3">
-                An enthusiast that was tired of not having a place to store your watch list 
-                and watched list of your favorite content. We took it upon ourselves to create a space for 
-                people to look up any sort of content they want to see, as well as what others think about 
-                it. Think of it as having a place to store your favorite content with no risk of ever 
-                forgetting where you left off or what you thought of it.
-            </p>
+    })
+    return (
+        <>
+        <h1>Welcome to Movielo!</h1>
+        <div className="carousel">
+            <h3 className="recommend">
+            <div className="about-us">
+                <h3 className="about-us2">About us</h3>
+                <p className="about-us3">
+                    An enthusiast that was tired of not having a place to store your watch list 
+                    and watched list of your favorite content. We took it upon ourselves to create a space for 
+                    people to look up any sort of content they want to see, as well as what others think about 
+                    it. Think of it as having a place to store your favorite content with no risk of ever 
+                    forgetting where you left off or what you thought of it.
+                </p>
+            </div>
+                <div className="recommend2">Content we recommend →</div> 
+            </h3>
+            <div className="imgcontainer">
+                <img className="homeImg" src={images[currentIndex]} alt="https://m.media-amazon.com/images/M/MV5BMTk4ODQzNDY3Ml5BMl5BanBnXkFtZTcwODA0NTM4Nw@@._V1_SX300.jpg" />
+            </div>
         </div>
-            <div className="recommend2">Content we recommend →</div> 
-        </h3>
-        <div className="imgcontainer">
-            <img className="homeImg" src={images[currentIndex]} alt="" />
-        </div>
-    </div>
-    </>
- )
+        </>
+    )
 }
 

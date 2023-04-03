@@ -21,7 +21,7 @@ export default function UpdateCommentForm({ handleUpdateComment, commentId}) {
     return (
         <form onSubmit={handleSubmit}>
             <label className="editCommentText">Edit:</label>
-            <textarea name="content" placeholder='Update your comment' value={updateCommentItem.content} onChange={handleInputChange} />
+            <textarea name="content" className="editText" placeholder='Update your comment' value={updateCommentItem.content} onChange={handleInputChange} />
             <label className="editRatingText">Rating:</label>
             <select className="rating" name="rating" value={updateCommentItem.rating} onChange={handleInputChange}>
                 <option value={1}>1</option>

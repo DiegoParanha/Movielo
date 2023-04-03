@@ -6,6 +6,7 @@ import SearchPageList from '../../components/SearchPageList/SearchPageList';
 
 export default function SearchPage(props) {
     const [searchResults, setSearchResults] = useState([]);
+    // const [showOptionsBtn, setShowOptionsBtn] = useState(false);
     const navigate = useNavigate();
 
     async function handleSearch (searchItem) {
@@ -22,15 +23,27 @@ export default function SearchPage(props) {
         <SearchPageList results={result} idx={idx} handleDetail={handleDetail} />
     ))
 
+    async function addPage() {
+        let page = await searchResults.page;
+        for (let i = 0; i <= page; i++) {
+            
+        }
+    }
+
     
     return (
         <>
         <div>
             <h1>Search for any content</h1>
             <SearchForm handleSearch={handleSearch}/>
-        <h1 className='heading'>Content</h1> 
-        <div className='section'>{SearchResultsMap}</div>
-        {/* <button>More options →</button>  */}
+            <h1 className='heading'>Content</h1> 
+            <div className='section'>{SearchResultsMap} 
+                {SearchResultsMap === true ?
+                    <button className="optionsBtn" onClick={addPage}>More options →</button>
+                    :
+                    null 
+                }    
+            </div>
         </div>
 
         </>

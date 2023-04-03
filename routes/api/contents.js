@@ -13,4 +13,11 @@ router.get('/search', ensureLoggedIn, contentCtrl.search);
 router.get('/:id', ensureLoggedIn, contentCtrl.show);
 
 
+router.post('/:id', ensureLoggedIn, contentCtrl.addToWatchList);
+
+
+router.get('/', ensureLoggedIn, contentCtrl.getWatchList);
+
+
+
 module.exports = router;

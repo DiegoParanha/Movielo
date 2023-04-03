@@ -8,10 +8,17 @@ export async function index() {
 export async function getSearch(searchData) {
     const searchTitle = await sendRequest(`${BASE_URL}/search?searchItem=${searchData}`)
     return searchTitle
-    // return sendRequest(BASE_URL/search, 'GET', search)
 }
 
 export async function getContentDetails(id) {
     const contentData = await sendRequest(`${BASE_URL}/${id}`)
     return contentData
+}
+
+export async function addToWatchList(contentId) {
+    return sendRequest(`${BASE_URL}/${contentId}`, 'POST')
+}
+
+export async function getWatchList() {
+    return sendRequest(BASE_URL)
 }

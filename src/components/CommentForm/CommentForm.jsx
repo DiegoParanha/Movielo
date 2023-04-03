@@ -26,7 +26,7 @@ export default function CommentForm({handleCreateComment}) {
                 onChange={handleChange}
                 required 
             />
-            <label className="ratingLabel" htmlFor="rating">Rating</label>
+            <label className="ratingLabel" htmlFor="rating">Rating:</label>
             <select className="rating" name="rating" value={newComment.rating} onChange={handleChange}>
                 <option value={1}>1</option>
                 <option value={2}>2</option>

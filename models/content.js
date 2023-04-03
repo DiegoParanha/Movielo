@@ -31,7 +31,12 @@ const contentSchema = new Schema({
     Poster: {type: String, requried: true},
     imdbID: {type: String, requried: true},
     Type: {type: String, required: true},
-    comments: [commentSchema]
+    comments: [commentSchema],
+    usersWatchList: [{
+        type: Schema.Types.ObjectId,
+        ref: 'User',
+        required: true,
+    }]
 }, {
     timestamps: true
 });

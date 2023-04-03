@@ -122,9 +122,18 @@ footer {
 .homeImg {
   margin-top: 30px;
   height: 30vh;
-  transition: 100ms;
+  transition: 500ms;
 }
 
 .contentSearchTag {
   color: lightgray;
+}
+
+.optionsBtn {
+  font-size: 20px;
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  margin: auto;
 }
