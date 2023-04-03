@@ -11,7 +11,7 @@ import SearchPage from '../SearchPage/SearchPage'
 import ContentList from '../ContentList/ContentList';
 // import SearchPageList from '../../components/SearchPageList/SearchPageList';
 import ContentDetail from '../../components/ContentDetail/ContentDetail';
-import UpdatedCommentForm from '../../components/UpdatedCommentForm/UpdatedCommentForm';
+import UpdateCommentForm from '../../components/UpdateCommentForm/UpdateCommentForm';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -30,7 +30,7 @@ export default function App() {
               <Route path="/watchlist" element={<WatchListPage user={user} />} />
               <Route path="/contentlist" element={<ContentList />} />
               <Route path="/content/:id" element={<ContentDetail user={user}/>} />
-              <Route path="/content/:id/edit" element={<UpdatedCommentForm />}  />
+              <Route path="/content/:id/edit" element={<UpdateCommentForm />}  />
             </Routes>
           </>
           :

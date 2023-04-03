@@ -20,7 +20,7 @@ export async function editComment(id) {
     return editCommentRequest
 }
 
-export async function updateComment(id) {
-    const updateCommentRequest = await sendRequest(`/api/comments/${id}`, 'PUT')
+export async function updateComment(id, commentData) {
+    const updateCommentRequest = await sendRequest(`/api/comments/${id}`, 'PUT', commentData)
     return updateCommentRequest
 }

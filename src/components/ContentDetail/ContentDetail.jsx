@@ -9,6 +9,7 @@ import './ContentDetail.css'
 export default function ContentDetail({user}) {
     const [contentDetails, setContentDetails] = useState(null)
     const {id} = useParams();
+    const [showCommentForm, setShowCommentForm] = useState(false);
     console.log(user);
 
     async function handleCreateComment(comment) {
@@ -66,13 +67,12 @@ export default function ContentDetail({user}) {
         <button className="watchListBtn">Add to watch List</button>
         <button className="watchedListBtn">Add to watched List</button>
         
-        {contentDetails.user === contentDetails.user ?
-        <button className="commentBtnForm">Write a Comment</button> 
-         :
+        <button className="commentBtnForm" onClick={() => setShowCommentForm(!showCommentForm)}>Write a Comment</button>
         <>
-        <CommentForm handleCreateComment={handleCreateComment} />
+        {showCommentForm && (
+            <CommentForm handleCreateComment={handleCreateComment} />
+        )}
         </>
-        }
         <CommentCard 
             handleDeleteComment={handleDeleteComment} 
             handleEditComment={handleEditComment} 

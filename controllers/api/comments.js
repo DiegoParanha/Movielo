@@ -9,12 +9,19 @@ module.exports = {
 }
 
 async function updateComment(req, res) {
-    const content = await Content.findOneAndUpdate({'comments._id': req.params.id});
-    const commentSubdoc = Content.comments.id(req.params.id);
-    if (!commentSubdoc.userId.equals(req.user._id)) return res.json(content)
-    commentSubdoc.content = req.body.content;
-    await content.save();
-    res.json(content)
+    const content = await Content.findOne({'comments._id': req.params.id, 'comments.user' : req.user._id});
+    const commentId = content.comments.id(req.params.id);
+    commentId.content = req.body.content
+    commentId.rating = req.body.rating
+    if (!commentId.user.equals(req.user._id)) { 
+        return res.status(401).json({message: 'Error'})
+    } 
+    try {
+        await content.save();
+    } catch (e) {
+        console.log(e.message)
+    }
+    res.json(content);
 }
 
 async function editComment(req, res) {

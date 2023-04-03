@@ -37,7 +37,7 @@ export default function HomePage() {
         <div className="about-us">
             <h3 className="about-us2">About us</h3>
             <p className="about-us3">
-                We are group of enthusiasts that were tired of not having a place to store your watch list 
+                An enthusiast that was tired of not having a place to store your watch list 
                 and watched list of your favorite content. We took it upon ourselves to create a space for 
                 people to look up any sort of content they want to see, as well as what others think about 
                 it. Think of it as having a place to store your favorite content with no risk of ever 
