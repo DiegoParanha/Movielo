@@ -10,6 +10,8 @@ export default function ContentDetail({user}) {
     const [contentDetails, setContentDetails] = useState(null)
     const {id} = useParams();
     const [showCommentForm, setShowCommentForm] = useState(false);
+    const [showWatchBtn, setShowWatchBtn] = useState(false);
+    const [showWatchedBtn, setShowWatchedBtn] = useState(false);
 
     async function handleCreateComment(comment) {
         const newContentWithComment = await commentsAPI.createComment(comment, contentDetails._id);
@@ -73,12 +75,44 @@ export default function ContentDetail({user}) {
             </div>
             <img className="detailPoster"src={contentDetails.Poster} alt={contentDetails.Title} />
         </div>
+        <button className="watchBtn" onClick={() => setShowWatchBtn(!showWatchBtn)}>
+            {showWatchBtn !== true ?
+            'Watch List'
+            :
+            'Cancel'
+            }
+            </button>
+            
+            {showWatchBtn === true ?
+            <>
+            <div className="watchListBtnDiv">
+                <button className="watchListBtn" onClick={() => handleAddToWatchList(contentDetails._id)}>Add to Watch List</button>
+                <button className="watchListBtn" onClick={() => handleDeleteFromWatchList(contentDetails._id)}>Remove from Watch List</button>
+            </div>
+            </>
+            :
+            null
+            }
         
-        <button className="watchListBtn" onClick={() => handleAddToWatchList(contentDetails._id)}>Add to watch List</button>
-        <button className="watchListBtn" onClick={() => handleDeleteFromWatchList(contentDetails._id)}>Remove from watch List</button>
-        <button className="watchedListBtn" onClick={() => handleAddToWatchedList(contentDetails._id)}>Add to watched List</button>
-        <button className="watchedListBtn" onClick={() => handleDeleteFromWatchedList(contentDetails._id)}>Remove from watched List</button>
+        <button className="watchBtn" onClick={() => setShowWatchedBtn(!showWatchedBtn)}>
+            {showWatchedBtn !== true ? 
+            'Watched List'
+            :
+            'Cancel'
+            }
+            </button>
+            {showWatchedBtn === true ?
+            <>
+            <div className="watchedListBtnDiv">
+                <button className="watchedListBtn" onClick={() => handleAddToWatchedList(contentDetails._id)}>Add to Watched List</button>
+                <button className="watchedListBtn" onClick={() => handleDeleteFromWatchedList(contentDetails._id)}>Remove from Watched List</button>
+            </div>
+            </>
+            :
+            null
+            }
         
+    
         <button className="commentBtnForm" onClick={() => setShowCommentForm(!showCommentForm)}>
             {showCommentForm !== true ?
             'Write a Comment'

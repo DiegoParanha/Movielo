@@ -14,7 +14,13 @@ As an enthusiast who loves to keep track of my favorite movies and TV shows, I o
 
 
 # 💠 Screenshots
-<img src="">
+<img src="https://i.imgur.com/gd1V3ry.png">
+<img src="https://i.imgur.com/7jR1imX.png">
+<img src="https://i.imgur.com/NvbfaLw.png">
+<img src="https://i.imgur.com/JYiUFFc.png">
+<img src="https://i.imgur.com/th9TMt6.png">
+
+---
 
 # 🚀 Technologies Used
  ![HTML5](https://img.shields.io/badge/-HTML5-05122A?style=flat&logo=html5)
@@ -32,11 +38,12 @@ As an enthusiast who loves to keep track of my favorite movies and TV shows, I o
 
 
 # 📝 Getting Started
-1. Sign in or create an account to get access to the all movies and TV shows
-2. On the home Page you are greeted with an about us and a content recommendation carousel of my favorite titles
-3. Click on search in the nav bar, then you can look up any titles from the movie API so you can see what other if other users are talking about it or if they have rated that specfic content.
+1. Sign in or create an account to get access to the all Movies and TV Shows
+2. On the home Page you are greeted with an About Us and a content recommendation carousel of my favorite titles
+3. Click on 'search' in the nav bar, then you can look up any titles from the movie API to then see what others have left as comments or to see what they rate that piece of content.
 4. You can either add a comment yourself to the content or choose to add it to your "Watch List" or "Watched List"
-5. Once added to either list you are able to give it personal notes / ratings that are only for you to see.
+5. Once it is placed in either list you can then click on that content again
+
 
 ---
 
@@ -45,7 +52,7 @@ As an enthusiast who loves to keep track of my favorite movies and TV shows, I o
 ---
 # 👾 Upcoming Features
 - User specific profiles that they can share their watch list's with other users
-- Users to be able to submit a photo to display in the nav bar
-- Changes pages based on search results
-- User names to be unique and I want users to get an error message when they try and use an email/ username that is already taken 
+- Users to be able to submit a photo to display in the nav bar to make it feel a bit more personal
+- Change pages based on search total results from the search bar
+- User names to be unique and for users to get an error message when they try and use an email/ username that is already taken 
 

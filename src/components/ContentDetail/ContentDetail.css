@@ -26,16 +26,35 @@
 }
 
 .watchListBtn {
-    font-size: 15px;
-    
+    font-size: 15px; 
+    width: 25vw; 
 }
 
 .watchedListBtn {
     font-size: 15px;
+    width: 25vw;
+}
+
+.watchListBtnDiv {
+    display: grid;
+    grid-template-columns: 0.25fr 0.25fr;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+.watchedListBtnDiv {
+    display: grid;
+    grid-template-columns: 0.25fr 0.25fr;
+    justify-content: center;
+    padding-bottom: 10px;
 }
 
 .commentBtnForm {
     display: flex;
     margin: auto;
+    font-size: 15px;
+}
+
+.watchBtn {
     font-size: 15px;
 }
