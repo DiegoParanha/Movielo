@@ -19,9 +19,8 @@ export default function WatchedListPage({user}) {
 
   return (
     <>
-    <h1>{user.name}'s Watched List</h1>
-    <div className="section">{mappedWatchedList}</div>
+      <h1>{user.name}'s Watched List</h1>
+      <div className="section">{mappedWatchedList}</div>
     </>
-
   );
 }

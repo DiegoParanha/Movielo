@@ -14,6 +14,10 @@ router.get('/watchlist', ensureLoggedIn, contentCtrl.getWatchList);
 
 router.post('/:id/watchlist', ensureLoggedIn, contentCtrl.addToWatchList);
 
+router.delete('/watchlist/:id', ensureLoggedIn, contentCtrl.deleteFromWatchList);
+
+router.delete('/watchedlist/:id', ensureLoggedIn, contentCtrl.deleteFromWatchedList);
+
 // GET /api/contents/watchedlist
 router.get('/watchedlist', ensureLoggedIn, contentCtrl.getWatchedList);
 

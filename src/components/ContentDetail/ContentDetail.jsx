@@ -10,7 +10,6 @@ export default function ContentDetail({user}) {
     const [contentDetails, setContentDetails] = useState(null)
     const {id} = useParams();
     const [showCommentForm, setShowCommentForm] = useState(false);
-    // console.log(user);
 
     async function handleCreateComment(comment) {
         const newContentWithComment = await commentsAPI.createComment(comment, contentDetails._id);
@@ -35,8 +34,6 @@ export default function ContentDetail({user}) {
         useEffect(function() {
             async function getContentStuff() {
                 const allContentDetails = await contentAPI.getContentDetails(id);
-                // console.log(allContentDetails, "This is all content details")
-                // console.log(allContentDetails._id)
                 setContentDetails(allContentDetails);
             }
             getContentStuff();
@@ -44,14 +41,22 @@ export default function ContentDetail({user}) {
 
     async function handleAddToWatchList(contentId, userId) {
         const content = await contentAPI.addToWatchList(contentId, userId);
-        console.log(content, 'this is content, line 47') 
         return content
     }
 
     async function handleAddToWatchedList(contentId, userId) {
         const content = await contentAPI.addToWatchedList(contentId, userId);
-        console.log(content, 'this is content, line 47') 
         return content
+    }
+
+    async function handleDeleteFromWatchList(id) {
+        const updatedContent = await contentAPI.deleteFromWatchList(id);
+        return updatedContent
+    }
+
+    async function handleDeleteFromWatchedList(id) {
+        const updatedContent = await contentAPI.deleteFromWatchedList(id);
+        return updatedContent
     }
 
 
@@ -68,8 +73,11 @@ export default function ContentDetail({user}) {
             </div>
             <img className="detailPoster"src={contentDetails.Poster} alt={contentDetails.Title} />
         </div>
+        
         <button className="watchListBtn" onClick={() => handleAddToWatchList(contentDetails._id)}>Add to watch List</button>
+        <button className="watchListBtn" onClick={() => handleDeleteFromWatchList(contentDetails._id)}>Remove from watch List</button>
         <button className="watchedListBtn" onClick={() => handleAddToWatchedList(contentDetails._id)}>Add to watched List</button>
+        <button className="watchedListBtn" onClick={() => handleDeleteFromWatchedList(contentDetails._id)}>Remove from watched List</button>
         
         <button className="commentBtnForm" onClick={() => setShowCommentForm(!showCommentForm)}>
             {showCommentForm !== true ?

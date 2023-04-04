@@ -30,3 +30,13 @@ export async function addToWatchedList(contentId) {
 export async function getWatchedList() {
     return sendRequest(`${BASE_URL}/watchedlist`)
 }
+
+export async function deleteFromWatchList(id) {
+    const deleteFromWatchListRequest = await sendRequest(`${BASE_URL}/watchlist/${id}`, 'DELETE')
+    return deleteFromWatchListRequest
+}
+
+export async function deleteFromWatchedList(id) {
+    const deleteFromWatchedListRequest = await sendRequest(`${BASE_URL}/watchedlist/${id}`, 'DELETE')
+    return deleteFromWatchedListRequest
+}
