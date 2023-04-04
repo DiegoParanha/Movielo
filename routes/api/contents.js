@@ -9,14 +9,15 @@ router.get('/', ensureLoggedIn, contentCtrl.index);
 // GET / api/contents/search
 router.get('/search', ensureLoggedIn, contentCtrl.search);
 
+// GET /api/contents/watchlist
+router.get('/watchlist', ensureLoggedIn, contentCtrl.getWatchList);
+
 // GET /api/contents/:id
 router.get('/:id', ensureLoggedIn, contentCtrl.show);
 
 
-router.post('/:id', ensureLoggedIn, contentCtrl.addToWatchList);
+router.post('/:id/watchlist', ensureLoggedIn, contentCtrl.addToWatchList);
 
-
-router.get('/', ensureLoggedIn, contentCtrl.getWatchList);
 
 
 

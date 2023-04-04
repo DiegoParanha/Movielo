@@ -26,22 +26,10 @@
 }
 
 .poster:hover {
+    padding-top: 10px;
     border: whitesmoke 5px solid;
     transition: 300ms;
 }
-
-/* .detailbtn {
-    height: 4vh;
-    width: 10vw;
-    color: aqua;
-}
-
-.detailbtn:hover {
-   background-color: lightcyan;
-   color: cadetblue;
-   border: 1px aqua solid;
-   transition: 500ms;
-} */
 
 Link {
     width: 20vw;

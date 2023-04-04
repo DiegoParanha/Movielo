@@ -9,7 +9,7 @@ import NavBar from '../../components/NavBar/NavBar';
 import HomePage from '../HomePage/HomePage';
 import SearchPage from '../SearchPage/SearchPage'
 import ContentList from '../ContentList/ContentList';
-// import SearchPageList from '../../components/SearchPageList/SearchPageList';
+import SearchPageList from '../../components/SearchPageList/SearchPageList';
 import ContentDetail from '../../components/ContentDetail/ContentDetail';
 import UpdateCommentForm from '../../components/UpdateCommentForm/UpdateCommentForm';
 
@@ -28,7 +28,6 @@ export default function App() {
               <Route path="/" element={<HomePage />}/>
               <Route path="/watchedlist" element={<WatchedListPage user={user} />} />
               <Route path="/watchlist" element={<WatchListPage user={user} />} />
-              <Route path="/contentlist" element={<ContentList />} />
               <Route path="/content/:id" element={<ContentDetail user={user}/>} />
               <Route path="/content/:id/edit" element={<UpdateCommentForm />}  />
             </Routes>

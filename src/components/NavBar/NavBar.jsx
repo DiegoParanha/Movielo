@@ -15,9 +15,9 @@ export default function NavBar({ user, setUser }) {
       <Link className="links" to="/watchlist">Watch List</Link>
       &nbsp; | &nbsp;
       <Link className="links" to="/watchedlist">Watched List</Link>
-      &nbsp;&nbsp;
-      <span>Welcome, {user.name}</span>
-      &nbsp;&nbsp;
+      &nbsp; | &nbsp;
+      <span>Welcome, {user.name} </span>
+      &nbsp;&nbsp; |
       <Link className="links" to="" onClick={handleLogOut}>Log Out </Link>&nbsp;
     </nav>
   );

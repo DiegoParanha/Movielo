@@ -1,27 +1,25 @@
 import { useState, useEffect } from "react";
 import * as contentAPI from '../../utilities/content-api';
+import './ContentCard.css'
+import { useNavigate } from 'react-router-dom';
 
-export default function ContentCard() {
-    const [content, setContent] = useState([]);
+export default function ContentCard({watchContent, handleDetail}) {
+    const navigate = useNavigate();
 
-    useEffect(function() {
-        async function getContent() {
-            const allContent = await contentAPI.index();
-            setContent(allContent);
-        }
-        getContent()
-    }, [])
-
+    async function handleDetail(id) {
+        const ContentDetail = await navigate(`/content/${id}`)
+        return ContentDetail
+    }
+        
     return (
         <>
-        <h1>hello</h1>
-        <div className="section" >
+        <div className="section">
             <div>
                 <div className="container">
-                    <h3 className="title">{content.Title}</h3>
-                    <img className="poster" src={content.Poster} alt="" />
+                    <h3 className="title">{watchContent.Title}</h3>
+                    <img className="poster" src={watchContent.Poster} alt={watchContent.Title} onClick={() => handleDetail(watchContent.imdbID)}/>
                     <div className="row">
-                        <p className="info">({content.Year}) · {content.Type}</p>
+                        <p className="info">({watchContent.Year}) · {watchContent.Type}</p>
                     </div>
                 </div>
             </div>

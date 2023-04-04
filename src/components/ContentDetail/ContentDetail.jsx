@@ -42,8 +42,10 @@ export default function ContentDetail({user}) {
             getContentStuff();
         },[id]);
 
-    async function handleAddToWatchList(id) {
-        const content = await contentAPI.addToWatchList(id);
+    async function handleAddToWatchList(contentId, userId) {
+        const content = await contentAPI.addToWatchList(contentId, userId);
+        console.log(content, 'this is content, line 47') 
+        return content
     }
 
 

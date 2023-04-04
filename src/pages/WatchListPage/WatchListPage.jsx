@@ -5,10 +5,9 @@ import ContentCard from '../../components/ContentCard/ContentCard';
 export default function WatchListPage({user}) {
   const [watchList, setWatchList] = useState([])
 
-  useEffect( function() {
+  useEffect(function() {
     async function getWatchList() {
       const allWatchListMovies = await contentAPI.getWatchList();
-      console.log(allWatchListMovies)
       setWatchList(allWatchListMovies);
     }
     getWatchList();
@@ -21,8 +20,7 @@ export default function WatchListPage({user}) {
   return (
     <>
       <h1>{user.name}'s Watch List</h1>
-      {mappedWatchList}
+      <div className='section'>{mappedWatchList}</div>
     </>
     );
-
   }

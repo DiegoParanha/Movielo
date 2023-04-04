@@ -12,12 +12,31 @@ module.exports = {
 };
 
 async function getWatchList(req, res) {
-  const contents = await Content.find({});
-  console.log(contents)
-  const updatedContent = contents.filter((content) => content.usersWatchList.includes(req.user._id))
-  res.json(updatedContent)
+  const contents = await Content.find({usersWatchList: req.user._id})
+  res.json(contents)
 }
 
+async function addToWatchList(req, res) {
+  const content = await Content.findById(req.params.id);
+  // if (content.usersWatchList.includes(req.user._id)) {
+  //   content.usersWatchList.remove(req.user._id)
+  // } else {
+    content.usersWatchList.push(req.user._id)
+  // }
+  await content.save();
+  res.json(content);
+}
+
+// async function removeFromWatchList(req, res) {
+//   const content = await Content.findById(req.params.id);
+//   // if (content.usersWatchList.includes(req.user._id)) {
+//   //   content.usersWatchList.remove(req.user._id)
+//   // } else {
+//     content.usersWatchList.remove(req.user._id)
+//   // }
+//   await content.save();
+//   res.json(content);
+// }
 
 async function addToWatchList(req, res) {
   const content = await Content.findById(req.params.id);

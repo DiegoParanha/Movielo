@@ -16,9 +16,9 @@ export async function getContentDetails(id) {
 }
 
 export async function addToWatchList(contentId) {
-    return sendRequest(`${BASE_URL}/${contentId}`, 'POST')
+    return sendRequest(`${BASE_URL}/${contentId}/watchlist`, 'POST')
 }
 
 export async function getWatchList() {
-    return sendRequest(BASE_URL)
+    return sendRequest(`${BASE_URL}/watchlist`)
 }
