@@ -13,15 +13,11 @@ export default function ContentCard({watchContent, handleDetail}) {
         
     return (
         <>
-        <div className="section">
-            <div>
-                <div className="container">
-                    <h3 className="title">{watchContent.Title}</h3>
-                    <img className="poster" src={watchContent.Poster} alt={watchContent.Title} onClick={() => handleDetail(watchContent.imdbID)}/>
-                    <div className="row">
-                        <p className="info">({watchContent.Year}) · {watchContent.Type}</p>
-                    </div>
-                </div>
+        <div className="container">
+            <h3 className="title">{watchContent.Title}</h3>
+            <img className="poster" src={watchContent.Poster} alt={watchContent.Title} onClick={() => handleDetail(watchContent.imdbID)}/>
+            <div className="row">
+                <p className="info">({watchContent.Year}) · {watchContent.Type}</p>
             </div>
         </div>
         </>

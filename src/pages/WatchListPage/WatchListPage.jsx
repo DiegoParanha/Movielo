@@ -20,7 +20,7 @@ export default function WatchListPage({user}) {
   return (
     <>
       <h1>{user.name}'s Watch List</h1>
-      <div className='section'>{mappedWatchList}</div>
+      <div className="section">{mappedWatchList}</div>
     </>
     );
   }

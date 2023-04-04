@@ -48,6 +48,12 @@ export default function ContentDetail({user}) {
         return content
     }
 
+    async function handleAddToWatchedList(contentId, userId) {
+        const content = await contentAPI.addToWatchedList(contentId, userId);
+        console.log(content, 'this is content, line 47') 
+        return content
+    }
+
 
     if(!contentDetails) return null
 
@@ -63,7 +69,7 @@ export default function ContentDetail({user}) {
             <img className="detailPoster"src={contentDetails.Poster} alt={contentDetails.Title} />
         </div>
         <button className="watchListBtn" onClick={() => handleAddToWatchList(contentDetails._id)}>Add to watch List</button>
-        <button className="watchedListBtn">Add to watched List</button>
+        <button className="watchedListBtn" onClick={() => handleAddToWatchedList(contentDetails._id)}>Add to watched List</button>
         
         <button className="commentBtnForm" onClick={() => setShowCommentForm(!showCommentForm)}>
             {showCommentForm !== true ?

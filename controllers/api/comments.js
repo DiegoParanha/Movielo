@@ -49,8 +49,6 @@ async function createComment(req, res) {
         user: user
     })
     console.log(content)
-    // req.body.user = req.user._id;
-    // content.comments.push(req.body);
     content.comments.push(comment);
     await content.save();
     await content.populate('comments.user', 'name')

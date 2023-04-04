@@ -22,3 +22,11 @@ export async function addToWatchList(contentId) {
 export async function getWatchList() {
     return sendRequest(`${BASE_URL}/watchlist`)
 }
+
+export async function addToWatchedList(contentId) {
+    return sendRequest(`${BASE_URL}/${contentId}/watchedlist`, 'POST')
+}
+
+export async function getWatchedList() {
+    return sendRequest(`${BASE_URL}/watchedlist`)
+}

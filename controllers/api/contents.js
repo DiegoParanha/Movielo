@@ -8,8 +8,23 @@ module.exports = {
   search, 
   show,
   addToWatchList,
-  getWatchList
+  getWatchList,
+  getWatchedList,
+  addToWatchedList
+
 };
+
+async function getWatchedList(req, res) {
+  const contents = await Content.find({usersWatchedList: req.user._id})
+  res.json(contents)
+}
+
+async function addToWatchedList(req, res) {
+  const content = await Content.findById(req.params.id);
+  content.usersWatchedList.push(req.user._id)
+  await content.save();
+  res.json(content);
+}
 
 async function getWatchList(req, res) {
   const contents = await Content.find({usersWatchList: req.user._id})
@@ -18,11 +33,7 @@ async function getWatchList(req, res) {
 
 async function addToWatchList(req, res) {
   const content = await Content.findById(req.params.id);
-  // if (content.usersWatchList.includes(req.user._id)) {
-  //   content.usersWatchList.remove(req.user._id)
-  // } else {
-    content.usersWatchList.push(req.user._id)
-  // }
+  content.usersWatchList.push(req.user._id)
   await content.save();
   res.json(content);
 }
@@ -40,11 +51,7 @@ async function addToWatchList(req, res) {
 
 async function addToWatchList(req, res) {
   const content = await Content.findById(req.params.id);
-  // if (content.usersWatchList.includes(req.user._id)) {
-  //   content.usersWatchList.remove(req.user._id)
-  // } else {
-    content.usersWatchList.push(req.user._id)
-  // }
+  content.usersWatchList.push(req.user._id)
   await content.save();
   res.json(content);
 }
@@ -54,7 +61,6 @@ async function search(req, res) {
     if (!search) return null
     const response = await fetch(`${BASE_URL}apikey=${API_KEY}&s=${searchItem}&page=1`)
     const searchData = await response.json()
-    // console.log(searchData.Search)
     res.json(searchData.Search);
 }
 

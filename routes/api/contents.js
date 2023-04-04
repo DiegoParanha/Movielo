@@ -12,13 +12,15 @@ router.get('/search', ensureLoggedIn, contentCtrl.search);
 // GET /api/contents/watchlist
 router.get('/watchlist', ensureLoggedIn, contentCtrl.getWatchList);
 
-// GET /api/contents/:id
-router.get('/:id', ensureLoggedIn, contentCtrl.show);
-
-
 router.post('/:id/watchlist', ensureLoggedIn, contentCtrl.addToWatchList);
 
+// GET /api/contents/watchedlist
+router.get('/watchedlist', ensureLoggedIn, contentCtrl.getWatchedList);
 
+router.post('/:id/watchedlist', ensureLoggedIn, contentCtrl.addToWatchedList);
+
+// GET /api/contents/:id
+router.get('/:id', ensureLoggedIn, contentCtrl.show);
 
 
 module.exports = router;
